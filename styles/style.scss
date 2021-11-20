@@ -1,0 +1,358 @@
+@import "colors";
+@import "media-queries";
+
+$full-width: 100%;
+
+* {
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    margin: 0px;
+}
+
+header {
+    padding: 10px;
+    background: $primary-color;
+    //define function for margin
+    nav {
+        display: flex;
+        font-size: 1.6vw;
+        color: $secondary-color;
+        ul {
+            right: 0;
+            position: absolute;
+            display: flex;
+            list-style-type: none;
+            li {
+                margin: 15px;
+            }
+            a {
+                transition: all 500ms;
+                color: $secondary-color;
+                font-weight: bold;
+                &:hover {
+                    font-size: 1.2rem;
+                    color: $color-white;
+                }
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#mainImage {
+    width: $full-width;
+}
+
+.background-image {
+    background-image: url("../images/bg.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: $full-width;
+    padding-top: 10%;
+}
+
+.dialog-style {
+    height: 200px;
+}
+
+.position-center {
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+footer {
+    background-color: $secondary-color;
+    bottom: 0;
+    position: static;
+    width: $full-width;
+    display: flex;
+    height: 150px;
+    text-align: center;
+    @extend .position-center;
+}
+
+.display-flex {
+    display: flex;
+}
+
+%btn {
+    width: 100px;
+    border: 2px solid $primary-color;
+
+    &:hover {
+        transform: scale(0.98);
+    }
+}
+
+@function set-background($color) {
+    @if ($color == $primary-color) {
+        @return darken($secondary-color, 30%);
+    } @else {
+        @return lighten($primary-color, 20%);
+    }
+}
+
+.btn-secondary {
+    @extend %btn;
+    background-color: $secondary-color;
+    &:hover {
+        background-color: set-background($secondary-color);
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    background-color: $primary-color;
+    &:hover {
+        background-color: set-background($primary-color);
+    }
+}
+
+section {
+    height: 80vh;
+    margin-bottom: 10px;
+    padding: 50px 100px 50px 100px;
+    background-color: $primary-color;
+}
+
+.font-base {
+    color: $color-white;
+}
+
+.margin-top-30-percents {
+    margin-top: 30%;
+}
+
+.font-title {
+    font-size: 5.8vw;
+    color: $primary-color;
+    text-shadow: 2px 2px $color-white;
+}
+
+section > label {
+    color: $secondary-color;
+    @extend .font-base;
+}
+
+h3 {
+    padding-left: 50px;
+}
+
+p {
+    color: $color-white;
+}
+
+.circle-parent{
+    background: $primary-color;
+    padding-left: 50px;
+}
+.circle {
+    background: $secondary-color;
+    border-radius: 50%;
+    // width: 500px; height 500px;
+    width: 50vw;
+    height: 50vw;
+    text-align: center;
+    transition: width 1s;
+    &:hover {
+        width: 55vw;
+        // height: 55vh;
+    }
+}
+
+.display-grid {
+    display: grid;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $secondary-color;
+}
+
+// ::-webkit-scrollbar-thumb:hover {
+//     background: darken($secondary-color, 10%);
+// }
+
+html {
+    scrollbar-color: $secondary-color $color-white;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+.technology {
+    @extend .display-grid;
+    color: $color-white;
+}
+
+progress {
+    border: none;
+    height: 10px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    height: 200px; /* Modify this according to your need */
+    overflow: hidden;
+    width: 30%;
+    display: inline-block;
+}
+
+img {
+    height: 165px;
+    opacity: 0.6;
+    margin-right: 10px;
+    transition: transform 0.25s, visibility 0.25s ease-in;
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+        color: black;
+        transform: scale(1.2);
+    }
+    &:hover + .hide {
+        display: block;
+    }
+}
+
+.center-text {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    border-radius: 50%;
+    padding-top: 10px;
+    height: 50px;
+    width: 60px;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+    background-color: $secondary-color;
+}
+
+progress::-webkit-progress-value {
+    background: $secondary-color !important ;
+}
+progress::-moz-progress-bar {
+    background: $secondary-color !important ;
+}
+progress::-webkit-progress-bar {
+    background: $color-white;
+}
+
+.hide {
+    display: none;
+    &:hover {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@mixin sandwich-menu {
+    header {
+        nav {
+            ul {
+                margin-top: 60px;
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                a {
+                    display: block;
+                    border-bottom: 1px solid $color-white;
+                    padding: 5px;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+        }
+        #home {
+            float: left;
+            display: block;
+            font-size: 2em;
+        }
+        .menu {
+            clear: both;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+            z-index: 10;
+            background-color: $primary-color;
+        }
+        .menu-icon {
+            padding: 28px 20px;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+            .nav-icon {
+                background: $color-white;
+                display: block;
+                height: 2px;
+                width: 18px;
+                position: relative;
+                transition: background 0.2s ease-out;
+            }
+            .nav-icon::before {
+                background: $color-white;
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                transition: all 0.2 ease-out;
+                top: 5px;
+            }
+            .nav-icon::after {
+                background: $color-white;
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                transition: all 0.2 ease-out;
+                top: -5px !important;
+            }
+        }
+        .menu-btn:checked ~ .menu {
+            max-height: 50%;
+        }
+    }
+} 
+
+@include phone {
+    .sircle-parent {
+        position: relative;
+    }
+    section {
+        padding: 20px;
+    }
+    .circle {
+        // position: absolute;
+
+        height: 70vw;
+        width: 70vw;
+        bottom: -50px;
+        left: 10px;
+    }
+    @include sandwich-menu;
+}
+
+@include tablet {
+    @include sandwich-menu;
+}
+
+.menu-btn {
+    display: none;
+}

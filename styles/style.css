@@ -1,0 +1,430 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+}
+
+header {
+  padding: 10px;
+  background: black;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6vw;
+  color: #1fb9b9;
+}
+
+header nav ul {
+  right: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+header nav ul li {
+  margin: 15px;
+}
+
+header nav ul a {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  color: #1fb9b9;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header nav ul a:hover {
+  font-size: 1.2rem;
+  color: white;
+}
+
+#mainImage {
+  width: 100%;
+}
+
+.background-image {
+  background-image: url("../images/bg.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding-top: 10%;
+}
+
+.dialog-style {
+  height: 200px;
+}
+
+.position-center, footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: middle;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  background-color: #1fb9b9;
+  bottom: 0;
+  position: static;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  text-align: center;
+}
+
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-secondary, .btn-primary {
+  width: 100px;
+  border: 2px solid black;
+}
+
+.btn-secondary:hover, .btn-primary:hover {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+.btn-secondary {
+  background-color: #1fb9b9;
+}
+
+.btn-secondary:hover {
+  background-color: #333333;
+}
+
+.btn-primary {
+  background-color: black;
+}
+
+.btn-primary:hover {
+  background-color: #093636;
+}
+
+section {
+  height: 80vh;
+  margin-bottom: 10px;
+  padding: 50px 100px 50px 100px;
+  background-color: black;
+}
+
+.font-base, section > label {
+  color: white;
+}
+
+.margin-top-30-percents {
+  margin-top: 30%;
+}
+
+.font-title {
+  font-size: 5.8vw;
+  color: black;
+  text-shadow: 2px 2px white;
+}
+
+section > label {
+  color: #1fb9b9;
+}
+
+h3 {
+  padding-left: 50px;
+}
+
+p {
+  color: white;
+}
+
+.circle-parent {
+  background: black;
+  padding-left: 50px;
+}
+
+.circle {
+  background: #1fb9b9;
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+  text-align: center;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+}
+
+.circle:hover {
+  width: 55vw;
+}
+
+.display-grid, .technology {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1fb9b9;
+}
+
+html {
+  scrollbar-color: #1fb9b9 white;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.technology {
+  color: white;
+}
+
+progress {
+  border: none;
+  height: 10px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  height: 200px;
+  /* Modify this according to your need */
+  overflow: hidden;
+  width: 30%;
+  display: inline-block;
+}
+
+img {
+  height: 165px;
+  opacity: 0.6;
+  margin-right: 10px;
+  -webkit-transition: visibility 0.25s ease-in, -webkit-transform 0.25s;
+  transition: visibility 0.25s ease-in, -webkit-transform 0.25s;
+  transition: transform 0.25s, visibility 0.25s ease-in;
+  transition: transform 0.25s, visibility 0.25s ease-in, -webkit-transform 0.25s;
+}
+
+img:hover {
+  opacity: 1;
+  cursor: pointer;
+  color: black;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+img:hover + .hide {
+  display: block;
+}
+
+.center-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  border-radius: 50%;
+  padding-top: 10px;
+  height: 50px;
+  width: 60px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  background-color: #1fb9b9;
+}
+
+progress::-webkit-progress-value {
+  background: #1fb9b9 !important;
+}
+
+progress::-moz-progress-bar {
+  background: #1fb9b9 !important;
+}
+
+progress::-webkit-progress-bar {
+  background: white;
+}
+
+.hide {
+  display: none;
+}
+
+.hide:hover {
+  display: block;
+  cursor: pointer;
+}
+
+@media (max-width: 599px) {
+  .sircle-parent {
+    position: relative;
+  }
+  section {
+    padding: 20px;
+  }
+  .circle {
+    height: 70vw;
+    width: 70vw;
+    bottom: -50px;
+    left: 10px;
+  }
+  header nav ul {
+    margin-top: 60px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+  header nav ul a {
+    display: block;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  header #home {
+    float: left;
+    display: block;
+    font-size: 2em;
+  }
+  header .menu {
+    clear: both;
+    max-height: 0;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    z-index: 10;
+    background-color: black;
+  }
+  header .menu-icon {
+    padding: 28px 20px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  header .menu-icon .nav-icon {
+    background: white;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    -webkit-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
+  }
+  header .menu-icon .nav-icon::before {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-transition: all 0.2 ease-out;
+    transition: all 0.2 ease-out;
+    top: 5px;
+  }
+  header .menu-icon .nav-icon::after {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-transition: all 0.2 ease-out;
+    transition: all 0.2 ease-out;
+    top: -5px !important;
+  }
+  header .menu-btn:checked ~ .menu {
+    max-height: 50%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  header nav ul {
+    margin-top: 60px;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+  }
+  header nav ul a {
+    display: block;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+  }
+  header #home {
+    float: left;
+    display: block;
+    font-size: 2em;
+  }
+  header .menu {
+    clear: both;
+    max-height: 0;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
+    z-index: 10;
+    background-color: black;
+  }
+  header .menu-icon {
+    padding: 28px 20px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  header .menu-icon .nav-icon {
+    background: white;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    -webkit-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
+  }
+  header .menu-icon .nav-icon::before {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-transition: all 0.2 ease-out;
+    transition: all 0.2 ease-out;
+    top: 5px;
+  }
+  header .menu-icon .nav-icon::after {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-transition: all 0.2 ease-out;
+    transition: all 0.2 ease-out;
+    top: -5px !important;
+  }
+  header .menu-btn:checked ~ .menu {
+    max-height: 50%;
+  }
+}
+
+.menu-btn {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

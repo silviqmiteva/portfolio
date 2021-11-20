@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./styles/style.css">  old-->
+    <link rel="stylesheet" href="./styles/stylePage.css">
+    </link>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav" id="menu">
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#experience" onclick="closeMenu()">Experience</a>
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+                <span>&#9776;</span>
+            </a>
+        </div>
+    </header>
+    <div>
+        <div class="circle-parent">
+            <div class="circle">
+                <div class="display-grid">
+                    <label class="font-base margin-top-30-percents">Hi there!</label>
+                    <label class="font-title">I'm Silviya</label>
+                    <label class="font-base"> &lt; &gt;Web Developer&lt;/&gt;</label>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h1 id="about">About me</h1>
+            <p>I am passionate about my work. Because I love what I do, I have motivation that drives me to do my best.
+                In my job, this passion led me to challenge myself daily and learn new skills that helped me to do
+                better work.
+            </p>
+            <p>I am ambitious and driven. I thrive on challenge and constantly set goals for myself, so I have something
+                to strive toward.
+                I am organized. I always take notes to help myself stay on top of
+                deadlines.</p>
+        </div>
+        <div class="section">
+            <h1 id="experience">Experience</h1>
+            <p> I have more than 2 years of experience in these technologies. I am willing to
+                grow
+                and improve my technical skills.
+            </p>
+            <div>
+                <div class="technology">
+                    <label for="js">JavaScript</label>
+                    <progress id='js' max=100 value="60"> </progress>
+                </div>
+                <div class="technology">
+                    <label for="react">React.js</label>
+                    <progress id='react' max=100 value="75"> </progress>
+                </div>
+                <div class="technology">
+                    <label for="node">Node.js</label>
+                    <progress id='node' max=100 value="50"> </progress>
+                </div>
+                <div class="technology">
+                    <label for="html-css">HTML/CSS</label>
+                    <progress id='html-css' max=100 value="60"> </progress>
+                </div>
+            </div>
+            <p>For more information see my Linked in profile.</p>
+        </div>
+        <div class="section">
+            <h1 id="projects">Projects</h1>
+            <div id="info" class="project-info">
+                <div id="projectContent" class="project-content"></div>
+            </div>
+            <div class="projects">
+                <div class="image-container">
+                    <img src="./images/omd.png">
+                    <button onclick="showProjectInfo('omd')" class="center-button hide">View project</button>
+                </div>
+                <div class="image-container">
+                    <img src="./images/cook.png">
+                    <button onclick="showProjectInfo('culinaryBook')" class="center-button hide">View project</button>
+                </div>
+                <div class="image-container">
+                    <img src="./images/game.png">
+                    <button onclick="openWhoWantsToBeAMilionaireGame()" class="center-button hide">View project</button>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h1 id="contact">Contact me</h1>
+            <p>Linked in : <a
+                    href="https://bg.linkedin.com/in/silviya-miteva-3a50b9209?trk=people-guest_people_search-card">Silvya
+                    Miteva</a></p>
+            <p>Email : silviqmiteva_98@mail.bg</p>
+        </div>
+    </div>
+    <footer>
+        <p>2021 This is footer. </p>
+    </footer>
+    <script type="text/javascript" src="./scripts/script.js"></script>
+</body>
+
+</html>
